@@ -28,14 +28,14 @@
 
 	<!-- HEADER -->
 	<header id="header" class="container">
-		<h1 class="col-3 logo align-left">
+		<h1 class="col-1 logo text-center">
 			<a href="<?php echo $site_root; ?>/index.php">Package Control</a>
 		</h1>
-		<nav class="col-2 align-right text-center">
+		<!-- <nav class="col-2 align-right text-center">
 			<ul>
-				<li><a href="<?php echo($site_root); ?>/php/NS.php">NS</a></li>
+				<li><a href="<?php echo($site_root); ?>/php/NS.php">bla bla bla...</a></li>
 			</ul>			
-		</nav>
+		</nav> -->
 	</header> <!-- /header -->
 
 	

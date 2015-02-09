@@ -10,12 +10,22 @@
 
 	<!-- ITEMS COLLECTION -->
 	<div class="container text-center">
-		<div class="col-1">
-			<svg width="150" height="150" class="svg-color1"></svg>
-			<svg width="150" height="150" class="svg-color2"></svg>
-			<svg width="150" height="150" class="svg-color3"></svg>
-			<svg width="150" height="150" class="svg-color4"></svg>
-			<svg width="150" height="150" class="svg-color5"></svg>				
+		<div class="col-1 top-margin">
+			<svg width="150" height="150" class="svg-color1">
+				<text x="75" y="75" fill="$color-light-text" text-anchor="middle">Emmet</text>
+			</svg>
+			<svg width="150" height="150" class="svg-color2">
+				<text x="75" y="75" fill="$color-text" text-anchor="middle">SublimeLinter</text>
+			</svg>
+			<svg width="150" height="150" class="svg-color3">
+				<text x="75" y="75" fill="$color-text" text-anchor="middle">Git</text>
+			</svg>
+			<svg width="150" height="150" class="svg-color4">
+				<text x="75" y="75" fill="$color-text" text-anchor="middle">DockBlockr</text>
+			</svg>			
+			<svg width="150" height="150" class="svg-color5">
+				<text x="75" y="75" fill="$color-text" text-anchor="middle">ColorPicker</text>
+			</svg>				
 		</div>
 	</div>
 
