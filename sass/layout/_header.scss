@@ -5,18 +5,7 @@
 
 
 .l-header {
-
-	padding: 2rem;
-
-	.logo {
-		margin: 0;
-		padding: 0;
-
-		font-size: 4rem;
-		line-height: 3rem;
-
-		color: $color-text;
-	}
+	
 }
 
 a {
@@ -31,26 +20,12 @@ nav ul {
 	line-height: 3rem;
 	font-size: 2rem;
 
-	&:before {
-		content: ".nav {";
-		font-style: italic;
-	}
-	&:after {
-		content: " }";
-		font-style: italic;
-
-	}
-
 	li {
 		display: inline;
 		margin-left: 0.5rem;
 		padding: 0 1rem;
 		line-height: 3rem;
 
-		// border-radius: 15px;
-		// -moz-border-radius: 15px;
-		// -webkit-border-radius: 15px;
-		// border: 1px solid $color-text;
 	}
 }
 

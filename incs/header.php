@@ -1,14 +1,13 @@
 <!-- defining root folder variable -->
-<?php //$site_root = "/p1"; ?>
-<?php $site_root = "/p1"; ?>
+<?php $site_root = "/p2"; ?>
 
 <!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>Alex Sinfarosa</title>
+		<title>Package Control</title>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="description" content="Alex Sinfarosa Website">
+		<meta name="description" content="Sublime Text packages catalog">
 		<meta name="author" content="Alex Sinfarosa">
 
 		<!-- Mobile Specific Meta -->
@@ -18,6 +17,7 @@
 		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 		
 		<link href="https://fontastic.s3.amazonaws.com/RkWtkBvDuYjy9UgXdyoPeM/icons.css" rel="stylesheet">
+		
 		<!-- Google Fonts -->
 
 		<!-- Custom Style Sheet -->
@@ -25,5 +25,15 @@
 		
 	</head>
 	<body>
+
+	<!-- HEADER -->
+	<header id="header" class="container">
+		<h1 class="col-2 logo align-left">Package Control</h1>
+		<nav class="col-2 align-right text-center">
+			<ul>
+				<li><a href="<?php echo($site_root); ?>/php/NS.php">NS</a></li>
+			</ul>			
+		</nav>
+	</header> <!-- /header -->
 
 	

@@ -62,6 +62,15 @@
   width: 70%;
   margin: 0 auto; }
 
+.bg-azzurro,
+.bg-rosso,
+.bg-verde,
+.bg-giallo {
+  border-radius: 15px;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  border: 1px solid #454a4e; }
+
 .bg-rosso {
   background: #FF5E3E; }
 
@@ -88,6 +97,12 @@
   margin-top: 15px;
   height: auto;
   display: block; }
+
+.round-borders {
+  border-radius: 5%;
+  -moz-border-radius: 5%;
+  -webkit-border-radius: 5%;
+  border: 1px solid #454a4e; }
 
 /* =Bootstrap */
 /*=====================================
@@ -617,15 +632,6 @@ blockquote {
 /*=====================================
 =            header styles            =
 =====================================*/
-.l-header {
-  padding: 2rem; }
-  .l-header .logo {
-    margin: 0;
-    padding: 0;
-    font-size: 4rem;
-    line-height: 3rem;
-    color: #454a4e; }
-
 a {
   text-decoration: none; }
   a:hover {
@@ -635,12 +641,6 @@ nav ul {
   list-style-type: none;
   line-height: 3rem;
   font-size: 2rem; }
-  nav ul:before {
-    content: ".nav {";
-    font-style: italic; }
-  nav ul:after {
-    content: " }";
-    font-style: italic; }
   nav ul li {
     display: inline;
     margin-left: 0.5rem;
@@ -650,22 +650,6 @@ nav ul {
 /*===================================
 =            main styles            =
 ===================================*/
-section ul {
-  list-style-type: none;
-  line-height: 3rem;
-  font-size: 1.4rem; }
-  section ul:before {
-    content: ".connectTo {";
-    font-style: italic; }
-  section ul:after {
-    content: " }";
-    font-style: italic; }
-  section ul li {
-    display: inline;
-    margin-left: 0.5rem;
-    padding: 0 1rem;
-    line-height: 3rem; }
-
 /*=====================================
 =            footer styles            =
 =====================================*/
@@ -842,12 +826,6 @@ header a {
     text-decoration: none; }
 
 /* =Main */
-.background-color {
-  background: #202121; }
-
-.border-line {
-  border: 1px solid #8c9296; }
-
 .fa {
   font-size: 3rem; }
 
@@ -857,28 +835,12 @@ header a {
 .fa-github {
   color: #000; }
 
-.fa-smile-o {
-  color: #FFDE3D;
-  font-size: 2rem; }
-
 .icon-home-house-streamline {
   font-size: 2.1rem; }
 
-.bg-azzurro,
-.bg-rosso,
-.bg-verde,
-.bg-giallo {
-  border-radius: 15px;
-  -moz-border-radius: 15px;
-  -webkit-border-radius: 15px;
-  border: 1px solid #454a4e; }
-
-.round-borders {
-  border-radius: 5%;
-  -moz-border-radius: 5%;
-  -webkit-border-radius: 5%;
-  border: 1px solid #454a4e; }
-
-.logo:before {
-  content: ' > " ';
-  font-size: 3rem; }
+.logo {
+  margin: 0;
+  padding: 0.67rem 1rem;
+  line-height: 3rem;
+  font-size: 3rem;
+  font-weight: bold; }

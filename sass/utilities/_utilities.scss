@@ -60,7 +60,17 @@
 	margin: 0 auto;
 }
 
-// backgound colors for testing 
+// backgound colors for testing
+.bg-azzurro,
+.bg-rosso,
+.bg-verde,
+.bg-giallo {
+	border-radius: 15px;
+	-moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+	border: 1px solid $color-text;
+}
+
 .bg-rosso {
 	background: #FF5E3E;	
 }
@@ -90,3 +100,12 @@
     height:auto;
     display:block;
 }
+
+.round-borders {
+	border-radius: 5%;
+	-moz-border-radius: 5%;
+	-webkit-border-radius: 5%;
+	border: 1px solid $color-text;
+}
+
+
