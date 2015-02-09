@@ -34,7 +34,7 @@ h1 {
 
 	font-size: 3.375rem;
 	line-height: 3rem;
-	// font-weight: bold;
+	font-weight: bold;
 	// text-transform: uppercase;
 }
 h2 {
@@ -69,13 +69,14 @@ blockquote cite {
 
 /* =Header */
 
-header a {
-	color: $color-text;
+h1 a {
+	color: $color-light-text;
 	font-family: $font-2;
 	text-decoration: none;
 
 	&:hover {
 		text-decoration: none;
+		color: $color-light-text;
 	}
 	
 }
@@ -109,6 +110,26 @@ header a {
 
 svg {
 	margin:0.5rem 1.5rem;
+	border-radius: 15px;
+	-moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+	border: 1px solid $color-text;
+}
+
+.svg-color1 {
+	background: #105B63;
+}
+.svg-color2 {
+	background: #FFFCD3;
+}
+.svg-color3 {
+	background: #FFD34E;
+}
+.svg-color4 {
+	background: #DB9E36;
+}
+.svg-color5 {
+	background: #CE3D2E;
 }
 
 

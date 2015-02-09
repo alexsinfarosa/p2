@@ -681,9 +681,9 @@ nav ul {
 ======================================*/
 .btn-primary,
 .exit {
-  background-color: #ff5e3e;
+  background-color: #8c9296;
   border-radius: 6px;
-  border: 1px solid #ff5e3e;
+  border: 1px solid #454a4e;
   display: inline-block;
   cursor: pointer;
   color: #ffffff;
@@ -692,7 +692,7 @@ nav ul {
   font-weight: bold;
   padding: 6px 34px;
   text-decoration: none;
-  text-shadow: 0px 1px 0px #ff5e3e; }
+  text-shadow: 0px 1px 0px #454a4e; }
 
 .exit {
   margin: 1em auto;
@@ -793,7 +793,8 @@ h6 {
 
 h1 {
   font-size: 3.375rem;
-  line-height: 3rem; }
+  line-height: 3rem;
+  font-weight: bold; }
 
 h2 {
   font-size: 2.25rem;
@@ -822,12 +823,13 @@ blockquote cite {
   color: #8c9296; }
 
 /* =Header */
-header a {
-  color: #454a4e;
+h1 a {
+  color: #8c9296;
   font-family: "Raleway", sans-serif;
   text-decoration: none; }
-  header a:hover {
-    text-decoration: none; }
+  h1 a:hover {
+    text-decoration: none;
+    color: #8c9296; }
 
 /* =Main */
 .fa {
@@ -850,4 +852,23 @@ header a {
   font-weight: bold; }
 
 svg {
-  margin: 0.5rem 1.5rem; }
+  margin: 0.5rem 1.5rem;
+  border-radius: 15px;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  border: 1px solid #454a4e; }
+
+.svg-color1 {
+  background: #105B63; }
+
+.svg-color2 {
+  background: #FFFCD3; }
+
+.svg-color3 {
+  background: #FFD34E; }
+
+.svg-color4 {
+  background: #DB9E36; }
+
+.svg-color5 {
+  background: #CE3D2E; }

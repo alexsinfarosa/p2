@@ -28,7 +28,9 @@
 
 	<!-- HEADER -->
 	<header id="header" class="container">
-		<h1 class="col-2 logo align-left">Package Control</h1>
+		<h1 class="col-3 logo align-left">
+			<a href="<?php echo $site_root; ?>/index.php">Package Control</a>
+		</h1>
 		<nav class="col-2 align-right text-center">
 			<ul>
 				<li><a href="<?php echo($site_root); ?>/php/NS.php">NS</a></li>

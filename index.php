@@ -11,11 +11,11 @@
 	<!-- ITEMS COLLECTION -->
 	<div class="container text-center">
 		<div class="col-1">
-			<svg width="150" height="150" class="bg-rosso"></svg>
-			<svg width="150" height="150" class="bg-azzurro"></svg>
-			<svg width="150" height="150" class="bg-verde"></svg>
-			<svg width="150" height="150" class="bg-giallo"></svg>
-			<svg width="150" height="150" class="bg-rosso"></svg>				
+			<svg width="150" height="150" class="svg-color1"></svg>
+			<svg width="150" height="150" class="svg-color2"></svg>
+			<svg width="150" height="150" class="svg-color3"></svg>
+			<svg width="150" height="150" class="svg-color4"></svg>
+			<svg width="150" height="150" class="svg-color5"></svg>				
 		</div>
 	</div>
 
@@ -24,16 +24,16 @@
 	<h3 class="col-1">Search for a package</h3>
 		<form action="#" method="post">
 			<div class="col-5">
-				<input type="text" name="item" placeholder="item">
+				<input type="text" name="item" placeholder="Package Name">
 			</div>
 			<div class="col-5">
-				<input type="text" name="by" placeholder="by">
+				<input type="text" name="by" placeholder="By">
 			</div>
 			<div class="col-5">
-				<input type="number" name="version" placeholder="version">
+				<input type="number" name="version" placeholder="Version">
 			</div>
 			<div class="col-5">
-				<input type="text" name="label" placeholder="label">
+				<input type="text" name="label" placeholder="Labels">
 			</div>
 			<div class="col-5">
 				<input class="btn-primary" type="button" name="submit" value="SEND">

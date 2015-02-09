@@ -1,11 +1,9 @@
 
 	<!-- FOOTER -->
-	<footer class="container">
-		<div class="col-1">
-			<p class="top-margin text-center">
-				&copy; 2015 | Designed by <span class="author"> Alex Sinfarosa </span>
-			</p>	
-		</div>
+	<footer class="container text-center">
+		<p class="col-1 top-margin">
+			&copy; 2015 | Designed by <span class="author"> Alex Sinfarosa </span>
+		</p>	
 	</footer>
 
 
