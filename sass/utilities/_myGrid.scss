@@ -20,6 +20,7 @@
     width : 100%;
     margin: 0 auto;
     max-width : 1200px;
+    margin: $general-margin/2 auto;
 
     // position: relative; //check 
 }
@@ -27,7 +28,7 @@
 .container-small {
     max-width : 50%;
     min-width: 335px;
-    margin: $general-margin auto;
+    margin: $general-margin/2 auto;
 }
  
 /* Attribute selector */
