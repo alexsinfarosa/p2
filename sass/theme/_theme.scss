@@ -1,0 +1,148 @@
+/*====================================
+=            theme styles            =
+====================================*/
+
+
+
+/* =Typography */
+body {
+	color: $color-text;
+	font: #{$base-font-size}/#{$baseline} $font-1;
+}
+
+p {
+	a {
+		color: $color-text;
+		background: #EEE;
+		border-radius: 5px;
+	}
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6, {
+	margin-bottom: 1.3125rem;
+	color: $color-text;
+	font-family: $font-2;
+	font-weight: normal;
+}
+
+h1 {
+	font-size: 3.375rem;
+	line-height: 3rem;
+	// font-weight: bold;
+	// text-transform: uppercase;
+}
+h2 {
+	font-size: 2.25rem;
+	font-weight: bold;
+}
+h3 {
+	font-size: 1.8rem;
+	color: $color-light-text;
+}
+h4 {
+	margin-bottom: 10px;
+	font-size: 1rem;
+	// font-weight: bold;
+	letter-spacing: 1px;
+}
+h5 {
+	font-family: $font-1;
+	font-size: .75rem;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+h6 {
+	font-family: $font-1;
+	font-size: .444rem;
+}
+
+blockquote cite {
+	color: $color-light-text;
+}
+
+
+/* =Header */
+
+header a {
+	color: $color-text;
+	font-family: $font-2;
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: none;
+	}
+	
+}
+
+/* =Main */
+
+.background-color {
+	background: $color-dark-banner;
+}
+
+.border-line {
+	border: 1px solid $color-light-text;
+	// @include border-radius(5px);
+}
+
+// Fontawesome ICONS
+.fa {
+	font-size: 3rem;
+}
+.fa-twitter{
+	color: #8BC43F;
+}
+.fa-github{
+	color: #000;
+}
+.fa-smile-o {
+	color: #FFDE3D;
+	font-size: 2rem;
+}
+// Fontstic ICONS
+.icon-home-house-streamline {
+	font-size: 2.1rem;
+}
+
+// nav background colors
+.bg-azzurro,
+.bg-rosso,
+.bg-verde,
+.bg-giallo {
+	border-radius: 15px;
+	-moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+	border: 1px solid $color-text;
+}
+.round-borders {
+	border-radius: 5%;
+	-moz-border-radius: 5%;
+	-webkit-border-radius: 5%;
+	border: 1px solid $color-text;
+}
+
+.logo {
+	&:before {
+		content: ' > " ';
+		font-size: 3rem;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
