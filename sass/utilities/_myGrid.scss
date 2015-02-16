@@ -18,15 +18,13 @@
 /* Container */
 .container {
     width : 100%;
-    margin: 0 auto;
-    max-width : 1200px;
     margin: $general-margin/2 auto;
-
+    max-width : 1200px;
     // position: relative; //check 
 }
 
 .container-small {
-    max-width : 50%;
+    max-width : 55%;
     min-width: 335px;
     margin: $general-margin/2 auto;
 }

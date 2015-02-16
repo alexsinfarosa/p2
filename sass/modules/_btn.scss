@@ -5,14 +5,18 @@
 
 .btn-primary,
 .exit {
-	background-color: $color-light-text;
+	width: 100%;
+	height: 50px;
+	background-color: #333;
 	border-radius: 6px;
 	border:1px solid $color-text;
 	display: inline-block;
 	cursor: pointer;
-	color: #ffffff;
+	color: #FF7500;
+	text-transform: uppercase;
 	font-family: $font-1;
 	font-size: 1.1rem;
+	outline: none;
 	font-weight: bold;
 	padding: 6px 34px;
 	text-decoration: none;
@@ -24,6 +28,7 @@
 	display: block;
 	width: 80%;
 }
+
 
 
 

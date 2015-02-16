@@ -45,10 +45,14 @@
 .top-margin-x2 {
 	margin-top: $general-margin * 2;
 }
+.top-margin-dividedBy2 {
+	margin-top: $general-margin / 2;
+}
 .bottom-margin {
 	margin-bottom: $general-margin;
 }
 .border-bottom {
+	padding-bottom: 5px;
 	border-bottom: 1px solid $color-hr;
 	// margin: 0 auto;
 	// width: 80%;	
@@ -64,7 +68,9 @@
 .bg-azzurro,
 .bg-rosso,
 .bg-verde,
-.bg-giallo {
+.bg-giallo,
+.bg-chiaro,
+.bg-scuro {
 	border-radius: 15px;
 	-moz-border-radius: 15px;
 	-webkit-border-radius: 15px;
@@ -82,6 +88,14 @@
 }
 .bg-giallo {
 	background: #FFDE3D;	
+}
+.bg-chiaro {
+	background: #FAFAFA;
+	border: none;	
+}
+.bg-scuro {
+	background: $color-dark-banner;
+	border: none;	
 }
 
 .active {

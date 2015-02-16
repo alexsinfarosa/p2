@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*===========================================================
 =            style.scss - Author: Alex Sinfarosa            =
 ===========================================================*/
@@ -52,10 +53,14 @@
 .top-margin-x2 {
   margin-top: 122.4px; }
 
+.top-margin-dividedBy2 {
+  margin-top: 30.6px; }
+
 .bottom-margin {
   margin-bottom: 61.2px; }
 
 .border-bottom {
+  padding-bottom: 5px;
   border-bottom: 1px solid #eeeeee; }
 
 .p-narrow {
@@ -65,7 +70,9 @@
 .bg-azzurro,
 .bg-rosso,
 .bg-verde,
-.bg-giallo {
+.bg-giallo,
+.bg-chiaro,
+.bg-scuro {
   border-radius: 15px;
   -moz-border-radius: 15px;
   -webkit-border-radius: 15px;
@@ -82,6 +89,14 @@
 
 .bg-giallo {
   background: #FFDE3D; }
+
+.bg-chiaro {
+  background: #FAFAFA;
+  border: none; }
+
+.bg-scuro {
+  background: #333333;
+  border: none; }
 
 .active {
   border-bottom: 2px solid white; }
@@ -120,12 +135,11 @@
 /* Container */
 .container {
   width: 100%;
-  margin: 0 auto;
-  max-width: 1200px;
-  margin: 30.6px auto; }
+  margin: 30.6px auto;
+  max-width: 1200px; }
 
 .container-small {
-  max-width: 50%;
+  max-width: 55%;
   min-width: 335px;
   margin: 30.6px auto; }
 
@@ -665,7 +679,7 @@ nav ul {
 =====================================*/
 .l-footer {
   margin: 0 auto;
-  background: #202121; }
+  background: #333333; }
   .l-footer a:hover {
     color: #fff; }
 
@@ -689,14 +703,18 @@ nav ul {
 ======================================*/
 .btn-primary,
 .exit {
-  background-color: #8c9296;
+  width: 100%;
+  height: 50px;
+  background-color: #333;
   border-radius: 6px;
   border: 1px solid #454a4e;
   display: inline-block;
   cursor: pointer;
-  color: #ffffff;
+  color: #FF7500;
+  text-transform: uppercase;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-size: 1.1rem;
+  outline: none;
   font-weight: bold;
   padding: 6px 34px;
   text-decoration: none;
@@ -736,16 +754,22 @@ iframe {
 input[type="text"],
 input[type="email"],
 input[type="number"],
-input[type="button"],
-textarea {
+input[type="submit"],
+textarea,
+select {
   width: 100%;
   height: 50px;
+  background: transparent;
   font-size: 1.3rem;
+  color: #8c9296;
   padding: 10px;
   outline: none;
   box-shadow: none !important;
   border: 1px solid #CCC !important;
   border-radius: 5px; }
+
+select option {
+  color: #8c9296; }
 
 textarea {
   height: 200px;
@@ -768,12 +792,65 @@ input[type="checkbox"] {
   word-break: break-all;
   white-space: normal; }
 
+.message {
+  color: #454a4e; }
+
 /*=====================================
 =            tables styles            =
 =====================================*/
 /*=====================================
 =            others styles            =
 =====================================*/
+.stars {
+  position: absolute;
+  top: -2em;
+  clip: rect(0, 0, 0, 0); }
+
+.score {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+  text-align: center;
+  border: 0;
+  font-size: 0; }
+
+.score legend {
+  overflow: hidden;
+  height: 0; }
+
+.score label {
+  font-size: 32px;
+  font-size: 2rem;
+  line-height: 32px;
+  line-height: 2rem;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  width: 1.2em;
+  height: 1em;
+  overflow: hidden;
+  text-indent: 100%; }
+
+.score label:before {
+  content: "☆";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-indent: 0;
+  line-height: 1em;
+  color: #aaa; }
+
+.score label:hover:before,
+.score label:hover ~ label:before,
+.score input:checked ~ label:before {
+  content: "★";
+  color: #ffbb04; }
+
+.score label:active {
+  position: relative;
+  top: 1px; }
+
 /* =Theme */
 /*====================================
 =            theme styles            =
@@ -782,11 +859,6 @@ input[type="checkbox"] {
 body {
   color: #454a4e;
   font: 18px/30.6px "Open Sans", Helvetica, Arial, sans-serif; }
-
-p a {
-  color: #454a4e;
-  background: #EEE;
-  border-radius: 5px; }
 
 h1,
 h2,
@@ -800,9 +872,9 @@ h6 {
   font-weight: normal; }
 
 h1 {
+  color: #fafafa;
   font-size: 3.375rem;
-  line-height: 3rem;
-  font-weight: bold; }
+  line-height: 3rem; }
 
 h2 {
   font-size: 2.25rem;
@@ -832,16 +904,17 @@ blockquote cite {
 
 /* =Header */
 h1 a {
-  color: #8c9296;
+  color: #fafafa;
   font-family: "Raleway", sans-serif;
   text-decoration: none; }
   h1 a:hover {
     text-decoration: none;
-    color: #8c9296; }
+    color: #cccccc; }
 
 /* =Main */
+/* =FONTAWESOME ICONS */
 .fa {
-  font-size: 3rem; }
+  font-size: 1.5rem; }
 
 .fa-twitter {
   color: #8BC43F; }
@@ -849,22 +922,21 @@ h1 a {
 .fa-github {
   color: #000; }
 
+/* =FONTASTIC ICONS */
 .icon-home-house-streamline {
   font-size: 2.1rem; }
 
-.logo {
-  margin: 1rem 0;
-  padding: 0.67rem 1rem;
-  line-height: 3rem;
-  font-size: 3rem;
-  font-weight: bold; }
-
+/* =SVG */
 svg {
   margin: 0.5rem 1.5rem;
   border-radius: 15px;
   -moz-border-radius: 15px;
   -webkit-border-radius: 15px;
-  border: 1px solid #454a4e; }
+  border: 1px solid #8c9296; }
+
+.svg-text {
+  letter-spacing: 1px;
+  font-size: 1.2rem; }
 
 .svg-color1 {
   background: #105B63; }
@@ -880,3 +952,65 @@ svg {
 
 .svg-color5 {
   background: #CE3D2E; }
+
+.logo {
+  font-size: 2.7rem;
+  color: #FF7500;
+  background: #27211E;
+  border-radius: 10px;
+  text-transform: uppercase;
+  padding: 0 5px;
+  letter-spacing: -2px; }
+
+a.title {
+  font-family: "Raleway", sans-serif;
+  font-size: 1.7rem;
+  color: #CE3D2E; }
+
+.by {
+  font-size: 1rem;
+  font-style: italic;
+  margin: 0 4px;
+  background: #eeeeee;
+  border-radius: 3px; }
+
+.package-author {
+  font-size: 1.4rem;
+  color: #6BC4E2; }
+
+.status,
+.rate {
+  font-size: 1rem; }
+
+.transition-L,
+.transition-R {
+  padding: 10px;
+  border-radius: 10px;
+  transition: all 1.2s ease; }
+  .transition-L:hover,
+  .transition-R:hover {
+    border-radius: 10px; }
+
+.transition-L:hover {
+  background: #FFFCD3; }
+
+.transition-R:hover {
+  background: #FFFCD3; }
+
+input.btn-primary {
+  width: 100%;
+  height: 50px;
+  background-color: #333;
+  border-radius: 6px;
+  border: 1px solid #454a4e;
+  display: inline-block;
+  cursor: pointer;
+  color: #FF7500;
+  text-transform: uppercase;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 1.1rem;
+  outline: none;
+  font-weight: bold;
+  padding: 6px 34px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #454a4e; }

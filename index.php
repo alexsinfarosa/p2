@@ -1,55 +1,60 @@
-<?php include 'incs/header.php'; ?>
+<?php 
+
+require 'php/functions.php';
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+	$name 				= check_input( $_POST['name'] );
+	$by 				= check_input( $_POST['by'] );
+	$status 			= 			   $_POST['status'];
+	$rating 			= 			   $_POST['rating'];
+
+	$success = true;
+	$errors = "";
+	$check = true;
+	
+	if ( empty($name) || empty($by) || ($status == "status") ) {
+		$errors = "Please provide the plugin name, author and status";
+		$check = false;
+	} 
+	if ($check && strlen($name) < 3) {
+		$errors = "Name should be more than two characters";
+		$check = false;
+	}
+
+	if ( $check && ((strlen($name) || strlen($by)) < 30) ) {
+		$errors = "Not a valid entry";
+		$check = false;
+	}
+
+	// if ( filter_var($name, FILTER_SANITIZE_STRING) ) {
+	// 	$errors = "Please, enter a valid name";
+	// }
 
 
-	<!-- SEARCH FORM -->
-	<div class="container-small">
-		<form action="#" method="post" class="col-1">	
-			<input type="text" name="search" placeholder="Search">
-		</form>
-	</div>
+	$success = !$errors && $success;
 
-	<!-- ITEMS COLLECTION -->
-	<div class="container text-center">
-		<div class="col-1 top-margin">
-			<svg width="150" height="150" class="svg-color1">
-				<text x="75" y="75" fill="$color-light-text" text-anchor="middle">Emmet</text>
-			</svg>
-			<svg width="150" height="150" class="svg-color2">
-				<text x="75" y="75" fill="$color-text" text-anchor="middle">SublimeLinter</text>
-			</svg>
-			<svg width="150" height="150" class="svg-color3">
-				<text x="75" y="75" fill="$color-text" text-anchor="middle">Git</text>
-			</svg>
-			<svg width="150" height="150" class="svg-color4">
-				<text x="75" y="75" fill="$color-text" text-anchor="middle">DockBlockr</text>
-			</svg>			
-			<svg width="150" height="150" class="svg-color5">
-				<text x="75" y="75" fill="$color-text" text-anchor="middle">ColorPicker</text>
-			</svg>				
-		</div>
-	</div>
+	if ($success) {
+		$lines = file("data.txt");
+		$match = true;
 
-	<!-- ADD ENTRY FORM -->
-	<div class="container top-margin">
-	<h3 class="col-1">Search for a package</h3>
-		<form action="#" method="post">
-			<div class="col-5">
-				<input type="text" name="item" placeholder="Package Name">
-			</div>
-			<div class="col-5">
-				<input type="text" name="by" placeholder="By">
-			</div>
-			<div class="col-5">
-				<input type="number" name="version" placeholder="Version">
-			</div>
-			<div class="col-5">
-				<input type="text" name="label" placeholder="Labels">
-			</div>
-			<div class="col-5">
-				<input class="btn-primary" type="button" name="submit" value="SEND">
-			</div>
-		</form>
-	</div>
+		foreach ($lines as $line) {
+			$entry = explode(' ', $line);
+			if ( strcasecmp($name, $entry[0]) == 0 ) {
+				$errors = "The plugin you entered is alredy in the list.";
+				$match = false;
+			}
+		}
+
+		if	($match) {
+			add_registered_user($name, $by, $status, $rating);
+			$errors = "The plugin has been added.";
+		}
+
+	}
+		
+}	
 
 
-<?php include 'incs/footer.php'; ?>
+require 'php/index.tmpl.php';
+
+ ?>
