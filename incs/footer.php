@@ -6,13 +6,6 @@
 			<a href="https://twitter.com/"><i class="fa fa-twitter"></i></a></span>
 		</p>	
 	</footer>
-
-
-	<!-- JQuery -->
-	<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
-
-	<!-- MAIN -->
-	<script src="<?php echo($site_root); ?>/js/scripts.js"></script>
 	
 
 	</body>

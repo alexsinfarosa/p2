@@ -102,9 +102,8 @@
   border-bottom: 2px solid white; }
 
 .required {
-  font-size: 0.5rem;
-  font-weight: bold;
-  text-transform: uppercase; }
+  font-size: 1.4rem;
+  margin-left: 10px; }
 
 .img-responsive {
   max-width: 100% !important;
@@ -723,7 +722,7 @@ nav ul {
 .exit {
   margin: 1em auto;
   display: block;
-  width: 80%; }
+  width: 10%; }
 
 /*================================
 =            carousel            =
@@ -962,12 +961,13 @@ svg {
   padding: 0 5px;
   letter-spacing: -2px; }
 
-a.title {
+.title {
   font-family: "Raleway", sans-serif;
-  font-size: 1.7rem;
-  color: #CE3D2E; }
+  font-size: 1.4rem;
+  color: #CE3D2E;
+  border-bottom: 1px solid #8c9296; }
 
-.by {
+.author {
   font-size: 1rem;
   font-style: italic;
   margin: 0 4px;
@@ -979,8 +979,20 @@ a.title {
   color: #6BC4E2; }
 
 .status,
-.rate {
-  font-size: 1rem; }
+.rating {
+  font-size: 1rem;
+  font-style: italic; }
+
+.rating-number {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #8BC43F;
+  margin-left: 1px; }
+
+.status-condition {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: bold; }
 
 .transition-L,
 .transition-R {

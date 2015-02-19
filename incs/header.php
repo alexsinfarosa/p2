@@ -1,5 +1,5 @@
-<!-- defining root folder variable -->
-<?php $site_root = "/p2"; ?>
+
+<?php $site_root = "/p2"; ?> 
 
 <!DOCTYPE html>
 <html lang="en">
@@ -15,10 +15,15 @@
 
 		<!-- Font Awesome -->
 		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">	
-<!-- 		<link href="https://fontastic.s3.amazonaws.com/RkWtkBvDuYjy9UgXdyoPeM/icons.css" rel="stylesheet">
- -->
+
 		<!-- Custom Style Sheet -->
 		<link rel="stylesheet" href="<?php echo($site_root); ?>/css/style.css">
+
+		<!-- JQuery -->
+		<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+		<!-- MAIN JS-->
+		<script src="<?php echo($site_root); ?>/js/scripts.js"></script>
 		
 	</head>
 	<body>
@@ -26,15 +31,10 @@
 
 	<!-- HEADER -->
 	<header id="header" class="container bg-scuro">
-	<!-- <img src="../img/sublime128.png" height="128" width="128" alt="sublime"> -->
 		<h1 class="col-1 text-center">
 			<a href="<?php echo $site_root; ?>/index.php">Essential <span class="logo">Sublime Text</span> Plugins</a>
 		</h1>
-		<!-- <nav class="col-2 align-right text-center">
-			<ul>
-				<li><a href="<?php echo($site_root); ?>/php/NS.php">bla bla bla...</a></li>
-			</ul>			
-		</nav> -->
 	</header> <!-- /header -->
+
 
 	

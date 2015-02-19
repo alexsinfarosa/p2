@@ -143,14 +143,15 @@ svg {
 }
 
 // =ITEMS COLLECTION
-a.title{
+.title{
 	font-family: $font-2;
-	font-size: 1.7rem;
+	font-size: 1.4rem;
 	// font-weight: bold;
 	color: #CE3D2E;
+	border-bottom: 1px solid $color-light-text;
 }
 
-.by {
+.author {
 	font-size: 1rem;
 	font-style: italic;
 	margin: 0 4px;
@@ -162,8 +163,20 @@ a.title{
 	color: #6BC4E2;
 }
 .status,
-.rate {
+.rating {
 	font-size: 1rem;
+	font-style: italic;
+}
+.rating-number {
+	font-size: 1rem;
+	font-weight: bold;
+	color: #8BC43F;
+	margin-left: 1px;
+}
+.status-condition {
+	text-transform: uppercase;
+	font-size: 0.8rem;
+	font-weight: bold;
 }
 
 // TRANSITION

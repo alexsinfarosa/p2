@@ -102,9 +102,8 @@
 	border-bottom: 2px solid white	
 }
 .required {
-	font-size: 0.5rem;
-	font-weight: bold;
-	text-transform: uppercase;
+	font-size: 1.4rem;
+	margin-left: 10px;
 }
 
 .img-responsive {
@@ -121,5 +120,6 @@
 	-webkit-border-radius: 5%;
 	border: 1px solid $color-text;
 }
+
 
 

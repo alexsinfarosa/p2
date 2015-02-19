@@ -2,58 +2,97 @@
 
 require 'php/functions.php';
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+// Making sure the file is there
+if( ! file_exists( 'data.txt' ) ) {
+	echo "Can't find the file data.txt";
+	exit;
+}
+
+$success = false;
+$errors = array();
+$message = "";
+$exit = "";
+
+$unspecified_status = "";
+$new = "";
+$trending = "";
+$popular = "";
+
+$unspecified_rating = "";
+$one = "";
+$two = "";
+$three = "";
+$four = "";
+$five = "";
+
+$search_result = "";
+
+if ( isset($_POST['submit']) ) {
 	$name 				= check_input( $_POST['name'] );
-	$by 				= check_input( $_POST['by'] );
+	$author 			= check_input( $_POST['author'] );
 	$status 			= 			   $_POST['status'];
 	$rating 			= 			   $_POST['rating'];
 
 	$success = true;
-	$errors = "";
-	$check = true;
+
+	// GENERATING STICKY FIELDS 
+	// Generating the select attribute for the dropdown menu - status
+	$unspecified_status	= ( $status == "unspecified" ) ? "selected" : "" ;
+	$new				= ( $status == "new" ) ? "selected" : "" ;
+	$trending			= ( $status == "trending" ) ? "selected" : "" ;
+	$popular			= ( $status == "popular" ) ? "selected" : "" ;
+
+	// Generating the select attribute for the dropdown menu - rating
+	$unspecified_rating	= ( $rating == "unspecified" ) ? "selected" : "" ;
+	$one				= ( $rating == "1" ) ? "selected" : "" ;
+	$two				= ( $rating == "2" ) ? "selected" : "" ;
+	$three				= ( $rating == "3" ) ? "selected" : "" ;
+	$four				= ( $rating == "4" ) ? "selected" : "" ;
+	$five				= ( $rating == "5" ) ? "selected" : "" ;
 	
-	if ( empty($name) || empty($by) || ($status == "status") ) {
-		$errors = "Please provide the plugin name, author and status";
-		$check = false;
+	// VALIDATION
+	if ( empty($name) || empty($author) || ($status == "unspecified") ) {
+		$errors['empty-fields'] = "Required fields cannot be blank.";
 	} 
-	if ($check && strlen($name) < 3) {
-		$errors = "Name should be more than two characters";
-		$check = false;
+	if ( strlen($name) < 3 ) {
+		$errors['short-name'] = "Package name should be more than two characters.";
 	}
 
-	if ( $check && ((strlen($name) || strlen($by)) < 30) ) {
-		$errors = "Not a valid entry";
-		$check = false;
+	if ( strlen($name) > 35 ) {
+		$errors['long-name'] = "Package name contains too many characters.";
 	}
 
-	// if ( filter_var($name, FILTER_SANITIZE_STRING) ) {
-	// 	$errors = "Please, enter a valid name";
-	// }
-
+	if ( strlen($author) > 20) {
+		$errors['long-author'] = "Author contains too many characters.";
+	}
+	
 
 	$success = !$errors && $success;
+	
 
 	if ($success) {
 		$lines = file("data.txt");
-		$match = true;
+		$noMatch = true;
 
 		foreach ($lines as $line) {
-			$entry = explode(' ', $line);
+			$entry = explode(' | ', $line);
 			if ( strcasecmp($name, $entry[0]) == 0 ) {
-				$errors = "The plugin you entered is alredy in the list.";
-				$match = false;
+				$errors['duplicate'] = "The plugin you entered is already in the list.";
+				$noMatch = false;
 			}
 		}
 
-		if	($match) {
-			add_registered_user($name, $by, $status, $rating);
-			$errors = "The plugin has been added.";
+		if	($noMatch) {
+			add_registered_user($name, $author, $status, $rating);
+			$message = "The plugin has been added!";
+			$exit = "<a class = 'exit text-center' href='index.php'>Reset</a>";
 		}
-
 	}
-		
-}	
+}
 
+if(isset($_GET['search'])) {
+	$exit = "<a class = 'exit text-center' href='index.php'>Reset</a>";
+}
 
 require 'php/index.tmpl.php';
 
